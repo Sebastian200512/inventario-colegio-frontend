@@ -1,16 +1,56 @@
-# React + Vite
+# 🚀 Sistema de Gestión de Inventario Escolar - Interfaz de Usuario
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Proyecto de Grado - Universidad Católica de Pereira
 
-Currently, two official plugins are available:
+Este repositorio contiene la interfaz moderna y responsiva del sistema, diseñada con un enfoque SaaS para optimizar la gestión de activos escolares a través de una experiencia de usuario fluida y segura.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎨 Tecnologías Utilizadas
 
-## React Compiler
+| Tecnología | Propósito |
+| :--- | :--- |
+| **React.js** | Biblioteca base para la creación de la UI |
+| **Tailwind CSS v4** | Estilado dinámico y moderno (vanguardia visual) |
+| **Axios** | Cliente HTTP para la comunicación con el Backend (API REST) |
+| **React Router Dom v6** | Enrutamiento dinámico y protección de pestañas |
+| **Lucide-React** | Sistema de iconografía profesional y vectorizada |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características Destacadas
 
-## Expanding the ESLint configuration
+- **Dashboards Diferenciados por Rol (`RBAC`):** Interfaces que cambian radicalmente según el usuario (ADMIN, COORDINADOR, DOCENTE).
+- **Persistencia de Sesión:** Gestión global del estado con `AuthContext` y almacenamiento seguro en `localStorage`.
+- **Consumo de Datos en Tiempo Real:** Sincronización total con el backend en el puerto 4000.
+- **Diseño tipo SaaS:** Interfaz amigable, interactiva y totalmente responsiva.
+- **Control de Flujo:** Implementación de `ProtectedRoutes` para evitar intrusiones.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Pasos para la Instalación
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [URL_REPOSITORIO]
+   ```
+
+2. **Instalar los paquetes de Node:**
+   ```bash
+   npm install
+   ```
+
+3. **Iniciar la plataforma en entorno de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   *La plataforma correrá en: `http://localhost:5173`*
+
+## 📓 Estructura del Proyecto
+
+```text
+src/
+├── services/   # Comunicación API (Axios)
+├── context/    # Estado Global (AuthContext)
+├── layouts/    # Estructura Lateral y Cabecera
+├── components/ # Modales e Interfaces Reutilizables
+└── pages/      # Vistas del Sistema (Dashboard, Inventory, Loans, Users)
+```
+
+## 👤 Autor
+- **Nombre:** Sebastian Patiño
+- **Institución:** Universidad Católica de Pereira
