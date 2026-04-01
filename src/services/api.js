@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Usamos la URL absoluta para evitar desvíos del navegador
 const api = axios.create({
-    baseURL: 'http://localhost:4000/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://inventario-colegio-backend.onrender.com/api',
 });
 
 // Forzamos que las peticiones siempre lleven el Token si existe
@@ -30,7 +30,7 @@ api.interceptors.response.use(
 export const loginRequest = (credentials) => api.post('/auth/login', credentials);
 
 // Aseguramos que la ruta termine en barra / si es necesario para Express
-export const getProducts = () => api.get('/inventory/'); 
+export const getProducts = () => api.get('/inventory/');
 export const createProduct = (data) => api.post('/inventory/', data);
 export const updateProduct = (id, data) => api.put(`/inventory/${id}`, data);
 export const deleteProduct = (id) => api.delete(`/inventory/${id}`);
